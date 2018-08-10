@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.log{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  margin-top:10vw;
+  margin-left:30vw;
+  
+}
+.user{
+  width:5vw;
+  height:5vw;
+  margin-top:1vw;
+  margin-right:1vw;
+  margin-bottom:0.4vw;
+  margin-left:1vw;
+  border-radius:50%;
+  text-align: left !important;
+  border:solid 0.2vw #0fffc3;
+  float:left
+}
+.score-dash{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+margin-top:3vw;
+margin-left:30vw;
+}
+.user-name{
+  color:#058766;
+  margin-left:0.7vw;
+  font-size:1.5vw;
+  padding-bottom: 0.3vw;
+  margin-top: 0.3vw;
+
+}
+.ques-ans{
+  color:#344a6d;
+  font-size:1em;
+  padding-bottom:1vw; 
+  
+}
+.score{
+  color:#b20879;
+  font-size:1em;
+  padding-bottom:1vw; 
+padding-left:30vw;
+ 
+
+}
+.main{
+  text-align: center;
+  font-size: 2.5em;
+  color:#12662c;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top:1vw;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none !important;
+  padding-left:24vw;
+  padding-top:0.6vw;
+  background-color: #f4f4e8;
+  list-style-type: none;
+  padding-bottom: 1vw
+}
+.nav li{
+  margin-left: 5vw;
+}
+.nav li:hover{
+  
+}
+.activeclass{
+  
+  color:#434851;
+  font-size:1.3em;
+  padding-bottom: 0.4vw;
+}
+.activeclass:hover{
+  background-color: #d4d4d6;
+
+  color:white;
+}
+.logged-user-image{
+  height:3vw;
+  width:3vw;
+  border-radius: 50%;
+  margin-left: 1vw;
+}
+.fresh{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+margin-top:3vw;
+margin-left:30vw;
+}
+.home{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+margin-top:3vw;
+margin-left:30vw;
+text-align:center;
+}
+.question{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+margin-top:3vw;
+margin-left:3vw;
+text-align:center;
+margin-bottom: 2vw;
+margin-left:5vw;
+
+}
+.auth{
+  height:5vw;
+  height:5vw;
+  float:left;
+  margin-top:0.5vw;
+  margin-left:0.2vw;
+  border-radius: 50%;
+  
+}
+.content{
+  margin-left:5vw;
+}
+.ques-view{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+margin-top:3vw;
+margin-left:3vw;
+text-align:center;
+margin-bottom: 2vw;
+margin-left:5vw;
+}
