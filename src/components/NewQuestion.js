@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Router,withRouter} from 'react-router-dom';
-import {addQuestion} from '../actions/async'
+import {addQuestion} from '../actions/async';
+import isAnswered from '../actions/isAnswered';
 class NewQuestion extends React.Component{
     state={
         optionOneText:'',
@@ -17,6 +18,7 @@ class NewQuestion extends React.Component{
         let {loggedUserId,dispatch}=this.props;
         addQuestion({...this.state,author:loggedUserId},dispatch)
         this.props.history.push('/')
+        dispatch(isAnswered(false))
     }
 
     render(){

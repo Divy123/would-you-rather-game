@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import {ProgressBar} from "react-bootstrap";
 class Result extends React.Component {
   render() {
     let { q, loggedUserId, users, ques } = this.props;
@@ -15,7 +15,10 @@ class Result extends React.Component {
               <p className='count'>
                 {op1votes} out of
                 {op1votes + op2votes}
+                <br/>
+                {op1votes/(op1votes+op2votes)*100}%
               </p>
+              
               <h2>Your vote</h2>
             </div>
             <div className="unvoted">
@@ -23,7 +26,10 @@ class Result extends React.Component {
               <p className='count'>
                 {op2votes} out of
                 {op1votes + op2votes}
+                <br/>
+                {op2votes/(op1votes+op2votes)*100}%
               </p>
+              
             </div>
           </div>
         ) : (
@@ -35,6 +41,7 @@ class Result extends React.Component {
                 {op1votes + op2votes}<br/>
                 {op1votes/(op1votes+op2votes)*100}%
               </p>
+              
             </div>
             <div className="voted">
               <p className='opt-text'>{q.optionTwo.text}</p>
@@ -42,6 +49,7 @@ class Result extends React.Component {
                 {op2votes} out of {op1votes + op2votes}<br/>
                 {op2votes/(op1votes+op2votes)*100}%
               </p>
+              
               <h2>Your vote</h2>
             </div>
           </div>

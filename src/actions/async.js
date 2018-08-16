@@ -7,7 +7,7 @@ import {
 import getUsers from "./getUsers";
 import getQuestions from "./getQuestions";
 import isAnswered from "../actions/isAnswered";
-import {hideLoading,showLoading} from 'react-redux-loading';
+
 
 
 export default function getUsersData() {
