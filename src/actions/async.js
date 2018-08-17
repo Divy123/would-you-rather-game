@@ -12,10 +12,10 @@ import isAnswered from "../actions/isAnswered";
 
 export default function getUsersData() {
   return dispatch => {
-    dispatch(showLoading())
+   
     _getUsers().then(users => {
       dispatch(getUsers(users));
-      dispatch(hideLoading())
+   
     });
   };
 }

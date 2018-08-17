@@ -5,8 +5,9 @@ import { connect } from "react-redux";
 
 class View extends React.Component {
   redirectHandler = (q, ans) => {
+    
     this.props.history.push({
-      pathname: `/question/${q.id}`,
+      pathname: `/questions/${q.id}`,
       state: { ans, q }
     });
   };

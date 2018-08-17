@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import Result from "./result";
 import { updateAnswer } from "../actions/async";
-
+import { withRouter } from "react-router-dom";
+import Error from './err';
 class Ques extends React.Component {
   state = {
     selectedOptionText: ""
@@ -26,7 +27,10 @@ class Ques extends React.Component {
   };
 
   render() {
-    let { ans, q, loggedUserId, users } = this.props;
+    console.log(this.props)
+    let { ans, questions, loggedUserId, users } = this.props;
+    let q=questions[this.props.match.params.id];
+    if(q)
     return (
       <div className="fresh">
         <h3>Asked by {users[q.author].name}</h3>
@@ -53,22 +57,28 @@ class Ques extends React.Component {
                 onChange={this.handleSelectedOption}
               />
               {q.optionTwo.text}
-            </label><br/>
+            </label>
+            <br />
             <button onClick={e => this.handleSubmit(e)}>Submit</button>
           </div>
         )}
       </div>
     );
+    else return (
+      <Error/>
+    )
   }
 }
-function mapStateToProps({ saveLoggedUser, getUsers, saveAnswerState }) {
+function mapStateToProps({ saveLoggedUser, getUsers,getQuestions, saveAnswerState }) {
   let loggedUserId = saveLoggedUser.loggedUserId;
   let users = getUsers.users;
   let ans = saveAnswerState.ans;
+  let questions=getQuestions.questions;
   return {
     loggedUserId,
     users,
-    ans
+    ans,
+    questions
   };
 }
-export default connect(mapStateToProps)(Ques);
+export default withRouter(connect(mapStateToProps)(Ques));

@@ -6,6 +6,7 @@ import getUsers from "./reducers/getUsers";
 import saveLoggedUser from "./reducers/saveLoggedUser";
 import getQuestions from "./reducers/getQuestions";
 import saveAnswerState from './reducers/saveAnswerState';
+import addRoute from './reducers/addRoute';
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
@@ -17,7 +18,8 @@ const store = createStore(
     getUsers,
     saveLoggedUser,
     getQuestions,
-    saveAnswerState
+    saveAnswerState,
+    addRoute
   }),
   /* preloadedState, */ composeEnhancers(applyMiddleware(thunk))
 );
